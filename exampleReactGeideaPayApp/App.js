@@ -12,8 +12,10 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from './HomeScreen';
 import CheckoutFlow from './CheckoutFlow';
 import ApiFlow from './ApiFlow';
-import ThreeDSScreen from 'react_geideapay/components/ThreeDSScreen.js';
-import CheckoutScreen from 'react_geideapay/components/CheckoutScreen';
+import ThreeDSScreen from './react_geideapay/components/ThreeDSScreen.js';
+import CheckoutScreen from './react_geideapay/components/CheckoutScreen';
+// import ThreeDSScreen from 'react_geideapay/components/ThreeDSScreen.js';
+// import CheckoutScreen from 'react_geideapay/components/CheckoutScreen';
 
 const Stack = createNativeStackNavigator();
 

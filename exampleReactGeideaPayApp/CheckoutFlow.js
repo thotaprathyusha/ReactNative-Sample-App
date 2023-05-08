@@ -11,12 +11,14 @@ import {
 } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import {TextInput} from 'react-native-paper';
-import PaymentModal from 'react_geideapay//components/PaymentModal';
+import PaymentModal from "./react_geideapay/components/PaymentModal";
+//import PaymentModal from 'react_geideapay//components/PaymentModal';
 import Toast from 'react-native-toast-message';
 import RadioGroup from 'react-native-radio-buttons-group';
 import SelectDropdown from 'react-native-select-dropdown';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Address from 'react_geideapay/models/adress';
+//import Address from 'react_geideapay/models/adress';
+import Address from "./react_geideapay/models/adress";
 const paymentOperations = [
   'Default (merchant configuration)',
   'Pay',

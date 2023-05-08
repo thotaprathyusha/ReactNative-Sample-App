@@ -8,16 +8,24 @@ import {
   StatusBar,
   Text,
 } from 'react-native';
-import GeideaApi from 'react_geideapay//actions/GeideaApi';
-import InitiateAuthenticationRequestBody from 'react_geideapay//request/InitiateAuthenticationRequestBody';
-import PayerAuthenticationRequestBody from 'react_geideapay//request/PayerAuthenticationRequestBody';
-import PayDirectRequestBody from 'react_geideapay//request/PayDirectRequestBody';
-import RefundRequestBody from 'react_geideapay//request/RefundRequestBody';
-import PaymentCard from 'react_geideapay//models/PaymentCard';
-import expiryDate from 'react_geideapay//models/expiryDate';
-import {CreditCard} from 'react_geideapay//components/common/CreditCard';
-import PaymentModal from 'react_geideapay//components/PaymentModal';
-import {Header, Input} from 'react_geideapay//components/common';
+import GeideaApi from './react_geideapay/actions/GeideaApi';
+import {CreditCard} from './react_geideapay/components/common/CreditCard';
+import expiryDate from './react_geideapay/models/expiryDate';
+import PaymentCard from './react_geideapay/models/PaymentCard';
+import RefundRequestBody from './react_geideapay/request/RefundRequestBody';
+import PayDirectRequestBody from './react_geideapay/request/PayDirectRequestBody';
+import PayerAuthenticationRequestBody from './react_geideapay/request/PayerAuthenticationRequestBody';
+import InitiateAuthenticationRequestBody from './react_geideapay/request/InitiateAuthenticationRequestBody';
+// import GeideaApi from 'react_geideapay//actions/GeideaApi';
+// import InitiateAuthenticationRequestBody from 'react_geideapay//request/InitiateAuthenticationRequestBody';
+// import PayerAuthenticationRequestBody from 'react_geideapay//request/PayerAuthenticationRequestBody';
+// import PayDirectRequestBody from 'react_geideapay//request/PayDirectRequestBody';
+// import RefundRequestBody from 'react_geideapay//request/RefundRequestBody';
+// import PaymentCard from 'react_geideapay//models/PaymentCard';
+// import expiryDate from 'react_geideapay//models/expiryDate';
+// import {CreditCard} from 'react_geideapay//components/common/CreditCard';
+// import PaymentModal from 'react_geideapay//components/PaymentModal';
+// import {Header, Input} from 'react_geideapay//components/common';
 import Toast from 'react-native-toast-message';
 import {TextInput} from 'react-native-paper';
 
@@ -51,7 +59,6 @@ class HomeScreen extends Component {
     this.onDataChange = this.onDataChange.bind(this);
     this.onPaymentSuccess = this.onPaymentSuccess.bind(this);
     this.onPaymentFailure = this.onPaymentFailure.bind(this);
-
   }
   componentDidMount() {
     this.setState({orderId: null});
@@ -60,7 +67,6 @@ class HomeScreen extends Component {
     this.setState({[key]: value});
   }
 
-  
   onInitiateAuthenticationButtonPress() {
     this.setState({isLoading: true});
     let initiateAuthenticationRequestBody =
@@ -168,7 +174,6 @@ class HomeScreen extends Component {
       });
   }
 
-
   componentDidUpdate(prevProps) {
     if (
       this.props.route.params != null &&
@@ -252,7 +257,7 @@ class HomeScreen extends Component {
             {
               flexDirection: 'row',
               marginVertical: 10,
-              marginHorizontal: 20
+              marginHorizontal: 20,
             },
           ]}>
           <TextInput
